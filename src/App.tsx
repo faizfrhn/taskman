@@ -10,23 +10,6 @@ import Container from 'react-bootstrap/Container';
 function App() {
 
   const [tasks, setTask ] = useState<ITask[]>([
-    {
-      id: 1,
-      name: "First task",
-      status: "IN PROGRESS"
-    },
-    {
-      id: 2,
-      name: "Second task",
-      status: "IN PROGRESS",
-      parentId: 1
-    },
-    {
-      id: 3,
-      name: "Third task",
-      status: "IN PROGRESS",
-      parentId: 1
-    },
   ])
 
   return (
