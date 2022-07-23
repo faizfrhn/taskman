@@ -48,6 +48,11 @@ const TaskList: React.FC<ITaskListProps>  = ({ tasks, setTask }) => {
     }
 
     const handleTaskUpdate = (inputTask: ITask) => {
+        if(inputTask.parentId === inputTask.id) {
+            alert("Cannot assign task as a child to itself!");
+            return
+        }
+
         if(tasks.filter((task) => task.id === inputTask.parentId).length === 0 && inputTask.parentId !== undefined) {
             alert("The parent task does not exist!")
             return
